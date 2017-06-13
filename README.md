@@ -1,11 +1,11 @@
 # Microservices
 ## Some thoughts on Micro-Services
 
-In the software world, the first gradual step seem to be introducing __CI__ (Continuous Integration). This is probably a software engineering "_best practice_" aimed at catching build-breaking issues as early as possible (it's pretty much a rite of passage for newer team members to "_break the build_" - if you commit a lot of code you will probably break the build sooner or later). 
+In the software world, the first gradual step seem to be introducing __CI__ (Continuous Integration). This is probably a software engineering _"best practice"_ aimed at catching build-breaking issues as early as possible (it's pretty much a rite of passage for newer team members to _"break the build"_ - if you commit a lot of code you will probably break the build sooner or later). 
 
 The reason why this is a big deal is that any build-breaking issues delay the overall release - _EVERYONE_ is blocked until the build is fixed (which is why advance warning of these issues is so important - and also why Micro-Services are so critical for larger codebases {more on this further down}). If you have ever worked at a start-up where funding depended on meeting release targets you will know how critical it is to be able to release in a timely fashion.
 
-Once __CI__ is nailed down, the next step is generally some form of automated integration testing followed by __CD__ (Continous Deployment) - usually aimed towards a staging area (the actual roll-out to production probably still happens according to a release cycle at this point - generally because it requires full documentation).
+Once __CI__ is nailed down, the next step is generally some form of automated integration testing followed by __CD__ (Continuous Deployment) - usually aimed towards a staging area (the actual roll-out to production probably still happens according to a release cycle at this point - generally because it requires full documentation).
 
 The software is now what is known as a __monolith__ or __BBOM__ (Big Ball of Mud). Which is probably fine for smaller codebases or where the developers are well-integrated and experienced. Teams (if they exist at all at this point) are usually vertically-oriented around core competencies (web, front-end, middleware, database, back-end). There are tactics and strategies for advancing to the next step (if needed).
 
@@ -15,7 +15,7 @@ _Coupling_ and _Cohesion_ are issues here - the acid test for a Micro-Service is
 
 The reorganization (if it occurs at all) will generally be towards something like _product teams_ (perhaps with a product manager) and may involve slicing up the vertically-oriented core competency teams into horizontally-oriented product teams (like Amazon's so-called _"__two-pizza teams__"_). The general guideline is that each team should control the entire pipeline from the software to the customer.
 
-How the slicing and dicing occurs is tricky. Eric Evans's ___Domain-Driven Design___ (the so-called "Blue Book"; it's subtitle is '_Tackling Complexity in the Heart of Software_') offers some guidelines on where to draw the boundaries between these "bounded contexts" (which is one of the trickiest problems around). The point is that the software should be partitioned based upon business (rather than technical) needs. ___Conway's Law___ is worth a look at this point:
+How the slicing and dicing occurs is tricky. Eric Evans's ___Domain-Driven Design___ (the so-called _'Blue Book'_; its subtitle is _'Tackling Complexity in the Heart of Software'_) offers some guidelines on where to draw the boundaries between these _"bounded contexts"_ (which is one of the trickiest problems around). The point is that the software should be partitioned based upon _business_ (rather than _technical_) needs. ___Conway's Law___ is worth a look at this point:
 
   https://en.wikipedia.org/wiki/Conway%27s_law
 
