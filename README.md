@@ -15,7 +15,23 @@ _Coupling_ and _Cohesion_ are issues here - the acid test for a Micro-Service is
 
 The reorganization (if it occurs at all) will generally be towards something like _product teams_ (perhaps with product managers) and may involve slicing up the vertically-oriented core competency teams into horizontally-oriented product teams (like Amazon's so-called _"__two-pizza teams__"_). The general guideline is that each team should control the entire pipeline from the software to the customer.
 
-How the slicing and dicing occurs is tricky. Eric Evans's ___Domain-Driven Design___ (the so-called _"Blue Book"_; its subtitle is _"Tackling Complexity in the Heart of Software"_) offers some guidelines on where to draw the boundaries between these _"bounded contexts"_ (which is one of the trickiest problems around). The point is that the software should be partitioned based upon _business_ (rather than _technical_) needs. ___Conway's Law___ is worth a look at this point:
+How the slicing and dicing occurs is tricky. Eric Evans's ___Domain-Driven Design___ (the so-called _"Blue Book"_; its subtitle is _"Tackling Complexity in the Heart of Software"_) offers some guidelines on where to draw the boundaries between these _"bounded contexts"_ (which is one of the trickiest problems around).
+
+Here are some further thoughts from Eric Evans, discussing
+[Domain-Driven Design at 10 Years](http://www.se-radio.net/2015/05/se-radio-episode-226-eric-evans-on-domain-driven-design-at-10-years/):
+
+> The bounded context is a concept which in more traditional architectures, there
+> weren't very good ways to implement that concept - you know, to really establish
+> the boundary - so it seems to me that microservices has delivered us a practical
+> and popular way of defining - and sticking to - those boundaries. And that's a
+> big deal. And the emphasis on, you know, the micro: someone once asked me, what's
+> the difference between microservices and the old SOA services? And I said: Well,
+> I think part of it is the micro. These services are ... smaller. That's just a
+> convention, of course, but it's an important convention: The idea that a very
+> small piece of software could be very isolated, and uh, you know, do a narrow
+> thing.
+
+The point is that the software should be partitioned based upon _business_ (rather than _technical_) needs. ___Conway's Law___ is worth a look at this point:
 
   https://en.wikipedia.org/wiki/Conway%27s_law
 
