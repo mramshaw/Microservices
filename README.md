@@ -8,6 +8,13 @@ The reason why this is a big deal is that any build-breaking issues delay the ov
 
 Once __CI__ is nailed down, the next step is generally some form of automated integration testing followed by __CD__ (Continuous Deployment) - usually aimed towards a staging area (the actual roll-out to production probably still happens according to a release cycle at this point - generally because it requires full documentation).
 
+- [The monolith](#the-monolith)
+- [Slicing and dicing](#slicing-and-dicing)
+- [The rewards of Microservices](#the-rewards-of-microservices)
+- [Devops](#devops)
+- [Release agility](#release-agility)
+- [Testing](#testing)
+
 #### The monolith
 
 The software is now what is known as a __monolith__ or __BBoM__ (Big Ball of Mud). Which is probably fine for smaller codebases or where the developers are well-integrated and experienced. Teams (if they exist at all at this point) are usually vertically-oriented around core competencies (web, front-end, middleware, database, back-end, etc). There are tactics and strategies for advancing to the next step (if needed).
@@ -64,7 +71,7 @@ can be problematic. So integration testing gets harder and more complicated
 #### Devops
 
 The general "fullstack" Kool-aid is that developers should do their own testing
-nd releasing:
+and releasing:
 
 > ___“You build it, you run it.”___ - Werner Vogels, Amazon CTO
 
