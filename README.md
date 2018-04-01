@@ -6,7 +6,18 @@ In the software world, the first gradual step seem to be introducing __CI__ (Con
 
 The reason why this is a big deal is that any build-breaking issues delay the overall release - _EVERYONE_ is blocked until the build is fixed (which is why advance warning of these issues is so important - and also why Microservices are so critical for larger codebases {more on this further down}). Anyone who has ever worked at a start-up where funding depended on meeting release targets will know how critical it is to be able to release in a timely fashion.
 
-Once __CI__ is nailed down, the next step is generally some form of automated integration testing followed by __CD__ (Continuous Deployment) - usually aimed towards a staging area (the actual roll-out to production probably still happens according to a release cycle at this point - generally because it requires full documentation).
+Once __CI__ is nailed down, the next step is generally some form of automated
+integration testing followed by __CD__ (Continuous Delivery or Continuous
+Deployment) - usually aimed towards a staging area (in the case of Continuous
+Delivery the actual roll-out to production probably still happens according to
+a release cycle at this point - generally because it requires full documentation,
+while in the case of Continuous Deployment the roll-out will be to production
+but possibly __feature-flagged__).
+
+[Continuous Deployment means what it says, in that code is continuously deployed
+to production. But perhaps Continuous Delivery might more correctly be called
+Continuously Deployable, in that it is not continuously deployed to production
+(generally this requires a human decision) ___but could be___.]
 
 - [The monolith](#the-monolith)
 - [Slicing and dicing](#slicing-and-dicing)
