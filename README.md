@@ -65,7 +65,7 @@ than _technical_) needs.
 
  ___Conway's Law___ is worth a look at this point:
 
-  https://en.wikipedia.org/wiki/Conway%27s_law
+    https://en.wikipedia.org/wiki/Conway%27s_law
 
 For more on the implications of Conway's Law for software architecture as well as
 team structure at Avvo, Spotify, Adobe, and Microsoft (and also the myth of the
@@ -74,7 +74,7 @@ team structure at Avvo, Spotify, Adobe, and Microsoft (and also the myth of the
     http://www.se-radio.net/2018/07/se-radio-episode-331-kevin-goldsmith-on-architecture-and-organizational-design/
 
 One conclusion of interest is that trying to subvert Conway's Law can give rise to
-dysfunctional organizations - where there is a clear software arcitecture, having
+dysfunctional organizations - where there is a clear software architecture, having
 an org chart that matches that structure can serve to clarify and delineate code
 (and bug) responsibilities.
 
