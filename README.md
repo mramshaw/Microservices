@@ -99,7 +99,7 @@ can be problematic. So integration testing gets harder and more complicated
 #### DevOps
 
 [Originally called NoOps (as in, no Operations) - which turned out to be wildly
- over-opimistic.]
+ over-optimistic.]
 
 The general "fullstack" Kool-aid is that developers should do their own testing
 and releasing:
@@ -107,8 +107,8 @@ and releasing:
 > ___“You build it, you run it.”___ - Werner Vogels, Amazon CTO
 
 However, the issue of the increased complexity of integration testing of microservices
-may well argue for the continued existence of QA/Testing/Release teams. On the plus
-side, problems in production can be quickly rolled back small-scale; a more granular
+may well argue for the continued existence of QA/Testing/Security/Release teams. On the
+plus side, problems in production can be quickly rolled back small-scale; a more granular
 release means finer control over the actual components. This makes for a much more
 _"__agile__"_ experience.
 
