@@ -23,9 +23,10 @@ Continuously Deployable, in that it is not continuously deployed to production
 - [Slicing and dicing](#slicing-and-dicing)
 - [Conway's Law](#conways-law)
 - [The rewards of Microservices](#the-rewards-of-microservices)
-- [Devops](#devops)
+- [DevOps](#devops)
 - [Release agility](#release-agility)
 - [Testing](#testing)
+- [Security Testing](#security-testing)
 
 #### The monolith
 
@@ -95,7 +96,10 @@ The problem with microservices is that bugs generally show up at higher levels, 
 can be problematic. So integration testing gets harder and more complicated
 (_bulkheads_ and _circuit-breakers_ may be of use here).
 
-#### Devops
+#### DevOps
+
+[Originally called NoOps (as in, no Operations) - which turned out to be wildly
+ over-opimistic.]
 
 The general "fullstack" Kool-aid is that developers should do their own testing
 and releasing:
@@ -154,3 +158,11 @@ while testing for Type I errors is sometimes referred to as __Non-Regression tes
 The general point is that all of these testing efforts are reduced by smaller deployments
 (it may be necessary to release deployments more frequently to compensate for their smaller
 size and scope).
+
+#### Security Testing
+
+[Sometimes called DevSecOps.]
+
+One of the advantages of a continuous build or CI/CD pipeline is that security can
+be added to this pipeline, both in terms of vulnerability scanning (Snyk) as well
+as application security tests (probably best built into the regular tests).
