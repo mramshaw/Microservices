@@ -1,18 +1,24 @@
 # Microservices
 
-## Some thoughts on Microservices
+Some thoughts on Microservices
 
-In the software world, the first gradual step seem to be introducing __CI__ (Continuous Integration). This is probably a software engineering _"best practice"_ aimed at catching build-breaking issues as early as possible (it's pretty much a rite of passage for newer team members to _"break the build"_ - any developer who commits a lot of code will probably break the build sooner or later). 
+## Background
+
+In the software world, the first gradual step towards microservices seems to be introducing __CI__
+(Continuous Integration). This is probably a software engineering _"best practice"_ aimed at catching
+build-breaking issues as early as possible (it's pretty much a rite of passage for newer team members
+to _"break the build"_ - any developer who commits a lot of code will probably break the build sooner
+or later).
 
 The reason why this is a big deal is that any build-breaking issues delay the overall release - _EVERYONE_ is blocked until the build is fixed (which is why advance warning of these issues is so important - and also why Microservices are so critical for larger codebases {more on this further down}). Anyone who has ever worked at a start-up where funding depended on meeting release targets will know how critical it is to be able to release in a timely fashion.
 
 Once __CI__ is nailed down, the next step is generally some form of automated
-integration testing followed by __CD__ (Continuous Delivery or Continuous
-Deployment) - usually aimed towards a staging area (in the case of Continuous
-Delivery the actual roll-out to production probably still happens according to
-a release cycle at this point - generally because it requires full documentation,
-while in the case of Continuous Deployment the roll-out will be to production
-but possibly __feature-flagged__).
+integration and/or security testing followed by __CD__ (Continuous Delivery or
+Continuous Deployment) - usually aimed towards a staging area (in the case of
+Continuous Delivery the actual roll-out to production probably will still happen
+according to a release cycle at this point - generally because it requires full
+documentation, while in the case of Continuous Deployment the roll-out will be
+to production but possibly __feature-flagged__).
 
 [Continuous Deployment means what it says, in that code is continuously deployed
 to production. But perhaps Continuous Delivery might more correctly be called
@@ -164,5 +170,5 @@ size and scope).
 [Sometimes called DevSecOps.]
 
 One of the advantages of a continuous build or CI/CD pipeline is that security can
-be added to this pipeline, both in terms of vulnerability scanning (Snyk) as well
-as application security tests (probably best built into the regular tests).
+be added to this pipeline, both in terms of vulnerability scanning ([Snyk](https://snyk.io/))
+as well as application security tests (probably best built into the regular tests).
