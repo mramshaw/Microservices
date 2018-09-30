@@ -25,6 +25,8 @@ to production. But perhaps Continuous Delivery might more correctly be called
 Continuously Deployable, in that it is not continuously deployed to production
 (generally this requires a human decision) ___but could be___.]
 
+## Contents
+
 - [The monolith](#the-monolith)
 - [Slicing and dicing](#slicing-and-dicing)
 - [Conway's Law](#conways-law)
@@ -34,7 +36,7 @@ Continuously Deployable, in that it is not continuously deployed to production
 - [Testing](#testing)
 - [Security Testing](#security-testing)
 
-#### The monolith
+## The monolith
 
 The software is now what is known as a __monolith__ or __BBoM__ (Big Ball of Mud). Which is probably fine for smaller codebases or where the developers are well-integrated and experienced. Teams (if they exist at all at this point) are usually vertically-oriented around core competencies (web, front-end, middleware, database, back-end, etc). There are tactics and strategies for advancing to the next step (if needed).
 
@@ -44,7 +46,7 @@ _Coupling_ and _Cohesion_ are issues here - the acid test for a Microservice is 
 
 The reorganization (if it occurs at all) will generally be towards something like _product teams_ (perhaps with product managers) and may involve slicing up the vertically-oriented core competency teams into horizontally-oriented product teams (like Amazon's so-called _"__two-pizza teams__"_). The general guideline is that each team should control the entire pipeline from the software to the customer.
 
-#### Slicing and dicing
+## Slicing and dicing
 
 How the slicing and dicing occurs is tricky. Eric Evans's ___Domain-Driven Design___
 (the so-called _"Blue Book"_; its subtitle is _"Tackling Complexity in the Heart of Software"_)
@@ -68,11 +70,11 @@ Here are some further thoughts from Eric Evans, discussing
 The point is that the software should be partitioned based upon _business_ (rather
 than _technical_) needs.
 
-#### Conway's Law
+## Conway's Law
 
  ___Conway's Law___ is worth a look at this point:
 
-    https://en.wikipedia.org/wiki/Conway%27s_law
+    http://en.wikipedia.org/wiki/Conway%27s_law
 
 For more on the implications of Conway's Law for software architecture as well as
 team structure at Avvo, Spotify, Adobe, and Microsoft (and also the myth of the
@@ -85,7 +87,7 @@ dysfunctional organizations - where there is a clear software architecture, havi
 an org chart that matches that structure can serve to clarify and delineate code
 (and bug) responsibilities.
 
-#### The rewards of Microservices
+## The rewards of Microservices
 
 For those who arrive at the Microservices stage, the business rewards are supposed
 to be huge; each microservice can be rapidly iterated (speed of iteration is often
@@ -102,7 +104,7 @@ The problem with microservices is that bugs generally show up at higher levels, 
 can be problematic. So integration testing gets harder and more complicated
 (_bulkheads_ and _circuit-breakers_ may be of use here).
 
-#### DevOps
+## DevOps
 
 [Originally called NoOps (as in, no Operations) - which turned out to be wildly
  over-optimistic.]
@@ -118,7 +120,7 @@ plus side, problems in production can be quickly rolled back small-scale; a more
 release means finer control over the actual components. This makes for a much more
 _"__agile__"_ experience.
 
-#### Release agility
+## Release agility
 
 This new agility manifests in partial or rolling deployments such as _canary deployments_,
 _blue-green deployments_, _red-black deployments_, _A/B deployments_ and the like.
@@ -148,7 +150,7 @@ evaluate impact. Obviously the smaller the change to production, the easier it i
 debug or diagnose. Conversely, larger change bundles may be much harder to evaluate
 or triage.
 
-#### Testing
+## Testing
 
 In terms of testing, there are two types of errors: ___Type I___ is when the change
 is not implemented correctly and ___Type II___ represents an unintended breakage - meaning
@@ -158,17 +160,17 @@ environments so being able to test in production (as in a _canary deployment_) c
 obviously be helpful. Type I (which is usually less common) is normally caught by
 _unit testing_ (as in __TDD__ or Test-Driven Development) whereas Type II is normally
 caught by _integration testing_ or _QA_ (Quality Assurance). Testing for Type II errors
-is also known as [Regression testing](https://en.wikipedia.org/wiki/Regression_testing)
+is also known as [Regression testing](http://en.wikipedia.org/wiki/Regression_testing)
 while testing for Type I errors is sometimes referred to as __Non-Regression testing__.
 
 The general point is that all of these testing efforts are reduced by smaller deployments
 (it may be necessary to release deployments more frequently to compensate for their smaller
 size and scope).
 
-#### Security Testing
+## Security Testing
 
 [Sometimes called DevSecOps.]
 
 One of the advantages of a continuous build or CI/CD pipeline is that security can
-be added to this pipeline, both in terms of vulnerability scanning ([Snyk](https://snyk.io/))
+be added to this pipeline, both in terms of vulnerability scanning ([Snyk](http://snyk.io/))
 as well as application security tests (probably best built into the regular tests).
